@@ -1,0 +1,30 @@
+// programa que haga un intercambio de valores  de v1 a v2 de v2 a v3 y de v3 a v1
+#include <stdio.h>
+int main() {
+    int v1, v2, v3;
+    int cambio;
+    
+    printf("Ingresa el valor de v1: ");
+    scanf("%d", &v1);
+    printf("Ingresa el valor de v2: ");
+    scanf("%d", &v2);
+    printf("Ingresa el valor de v3: ");
+    scanf("%d", &v3);
+
+  
+    printf("\n\nLos valores originales son:\n\n");
+     printf("El valor de v1 es: %d \n", v1); 
+    printf("El valor de v2 es: %d \n", v2); 
+    printf("El valor de v3 es: %d \n", v3); 
+          
+          cambio=v1;
+          v1=v2;
+          v2=v3;
+          v3=cambio;
+    printf("\n\nLos valores invertidos son:\n\n");
+     printf("El valor de v1 pasa a v2: %d \n", v1); 
+         printf("El valor de v2 pasa a v3: %d \n", v2); 
+          printf("El valor de v3 pasa a v1: %d \n", v3);      
+
+    return 0;
+}
