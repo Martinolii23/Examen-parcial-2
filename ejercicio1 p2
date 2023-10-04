@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+//operaciones aleatorias
+int main() {
+    srand(time(NULL));
+    int r1, r2;
+    int a[5] = {1, 2, 3, 4, 5};
+    int aleatorio;
+    int suma,resta,multiplicacion,division;
+    
+    r1 = rand() % (5 + 1 - 1) + 1;
+    r2 = rand() % 10;
+
+    printf("Primer Valor Aleatorio r1: %d\n", r1);
+    printf("Segundo Valor Aleatorio r2: %d\n\n", r2);
+
+    printf("\n1.- Suma\n2.- Resta\n3.- Multiplicacion\n4.- Division\n5.- Terminar el programa\n");
+
+    do {
+        aleatorio = rand() % 5; 
+
+        printf("\nOperacion Aleatoria: %d\n", a[aleatorio]);
+
+        if (a[aleatorio] == 1) {
+            int suma = r1 + r2;
+            printf("r1:%d\n",r1);
+            printf("r2:%d\n",r2);
+            
+            printf("Resultado de la suma: %d\n", suma);
+            break;
+        } else if (a[aleatorio] == 2) {
+            resta = r1 - r2;
+            printf("r1:%d\n",r1);
+            printf("r2:%d\n",r2); 
+            printf("Resultado de la resta: %d\n", resta);
+            break;
+        } else if (a[aleatorio] == 3) {
+        	
+             multiplicacion = r1 * r2;
+             printf("r1:%d\n",r1);
+            printf("r2:%d\n",r2);
+            printf("Resultado de la multiplicacion: %d\n", multiplicacion);
+            break;
+        } else if (a[aleatorio] == 4) {
+            if (r2 != 0) {
+                 division = r1 / r2;
+        	printf("r1:%d\n",r1);
+            printf("r2:%d\n",r2);
+                printf("Resultado de la division: %d\n", division);
+                break;
+            } else {
+                printf("\nno se puede dividir o 0\n");
+                break;
+            }
+        }
+
+    } while (a[aleatorio] != 5);
+
+    printf("\nAdios\n");
+
+    return 0;
